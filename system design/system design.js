@@ -43,3 +43,36 @@ function getLongUrl(short) {
 }
 
 
+///// Controller Layer (API Simulation)
+
+function shortenUrlHandler(longUrl) {
+  if (!longUrl) return { error: "URL required" };
+
+  const short = createShortUrl(longUrl);
+
+  return {
+    message: "Short URL created",
+    shortUrl: `https://short.ly/${short}`
+  };
+}
+
+function redirectHandler(shortCode) {
+  const longUrl = getLongUrl(shortCode);
+
+  if (!longUrl) return { error: "URL not found" };
+
+  return {
+    message: "Redirecting...",
+    redirectTo: longUrl
+  };
+}
+
+
+//// Simulating Requests
+
+console.log(shortenUrlHandler("https://google.com"));
+console.log(shortenUrlHandler("https://openai.com"));
+
+console.log(redirectHandler("abc123")); // maybe not exist
+
+
