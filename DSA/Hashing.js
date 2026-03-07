@@ -106,4 +106,28 @@ console.log(isAnagram("listen", "silent"))
 
 ///  true
 
+//// Find Duplicate Element
+
+function findDuplicates(arr) {
+    let seen = {}
+    let duplicates = []
+
+    for (let num of arr) {
+        if (seen[num]) {
+            duplicates.push(num)
+        } else {
+            seen[num] = true
+        }
+    }
+
+    return duplicates
+}
+
+console.log(findDuplicates([1,2,3,2,4,5,3]))
+
+
+/// output
+
+//// [2,3]
+
 
