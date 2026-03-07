@@ -1,3 +1,55 @@
+///Two Sum 
+
+function twoSum(arr, target) {
+    let map = {}
+
+    for (let i = 0; i < arr.length; i++) {
+        let complement = target - arr[i]
+
+        if (map[complement] !== undefined) {
+            return [map[complement], i]
+        }
+
+        map[arr[i]] = i
+    }
+
+    return []
+}
+
+console.log(twoSum([2,7,11,15], 9))
+
+//// output
+
+/// [0,1]
+
+/// Time Complexity 0(n)
+
+
+///// Count Frequency of Elements
+
+function countFrequency(arr) {
+    let hash = {}
+
+    for (let num of arr) {
+        if (hash[num]) {
+            hash[num]++
+        } else {
+            hash[num] = 1
+        }
+    }
+
+    return hash
+}
+
+console.log(countFrequency([1,2,2,3,3,3,4]))
+
+
+
+//// output
+
+/// {1:1, 2:2, 3:3, 4:1}
+
+
 //// Find First Non-Repeating Character
 
 function firstUniqueChar(str) {
