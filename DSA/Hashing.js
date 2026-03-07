@@ -131,3 +131,19 @@ console.log(findDuplicates([1,2,3,2,4,5,3]))
 //// [2,3]
 
 
+//// alternate method using Map
+
+function frequencyMap(arr) {
+    let map = new Map()
+
+    for (let num of arr) {
+        map.set(num, (map.get(num) || 0) + 1)
+    }
+
+    return map
+}
+
+console.log(frequencyMap([1,2,2,3]))
+
+
+
