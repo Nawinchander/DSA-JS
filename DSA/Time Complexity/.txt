@@ -1,0 +1,29 @@
+O(1)        → Constant
+O(log n)    → Logarithmic
+O(n)        → Linear
+O(n log n)  → Linearithmic
+O(n²)       → Quadratic
+O(2ⁿ)       → Exponential
+O(n!)       → Factorial
+
+
+Performance (best → worst):
+
+O(1) ⚡
+O(log n)
+O(n)
+O(n log n)
+O(n²)
+O(2ⁿ)
+O(n!)
+
+
+Two Pointer → O(n)
+
+Sliding Window → O(n)
+
+Binary Search → O(log n)
+
+Heap / Priority Queue → O(n log k)
+
+Backtracking → O(2ⁿ)
