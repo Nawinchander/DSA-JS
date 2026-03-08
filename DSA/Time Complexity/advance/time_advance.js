@@ -74,6 +74,45 @@ console.log(quickSort([5,3,8,4,2]));
 
 /// worst case // O(n²)
 
+//// O(n + m) — Graph Traversal
+
+// Occurs when processing nodes + edges.
+
+// Used in BFS / DFS.
+
+function bfs(graph, start) {
+  let queue = [start];
+  let visited = new Set();
+
+  while (queue.length) {
+    let node = queue.shift();
+
+    if (!visited.has(node)) {
+      console.log(node);
+      visited.add(node);
+
+      for (let neighbor of graph[node]) {
+        queue.push(neighbor);
+      }
+    }
+  }
+}
+
+const graph = {
+  A: ["B", "C"],
+  B: ["D"],
+  C: ["E"],
+  D: [],
+  E: []
+};
+
+bfs(graph, "A");
+
+/// complexity
+O(V + E)
+V = vertices
+E = edges
 
 
+/////
 
