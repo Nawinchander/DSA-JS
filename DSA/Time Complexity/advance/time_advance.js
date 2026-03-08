@@ -114,5 +114,21 @@ V = vertices
 E = edges
 
 
-/////
+///// O(k log n) — Heap / Priority Queue
+
+/// Find K Largest Elements
+
+function kLargest(arr, k) {
+  arr.sort((a,b) => b - a);
+  return arr.slice(0, k);
+}
+
+console.log(kLargest([5,1,9,3,7], 2));
+
+/// sorting O(n log n)
+
+/// Heap (optimized)  O(n log k)
+
+
+
 
