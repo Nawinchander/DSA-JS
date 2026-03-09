@@ -17,6 +17,28 @@ console.log(sum(5, 10));
 
 // Space Complexity: O(1)
 
+//////O(n) – Linear Space
+
+function createArray(n) {
+    let arr = [];
+
+    for (let i = 0; i < n; i++) {
+        arr.push(i);
+    }
+
+    return arr;
+}
+
+console.log(createArray(5));
+
+
+/// EXPLANATION
+
+// If n = 5  [0,1,2,3,4]
+
+// If n = 1000 Array size = 1000
+
+// Space Complexity: O(n)
 
 
 
