@@ -133,3 +133,46 @@ console.log(solveNQueens(4));
 //// Space Complexity: O(n²)
 
 
+///// Trie (Prefix Tree)
+
+class TrieNode {
+    constructor() {
+        this.children = {};
+        this.isEnd = false;
+    }
+}
+
+class Trie {
+    constructor() {
+        this.root = new TrieNode();
+    }
+
+    insert(word) {
+        let node = this.root;
+
+        for (let char of word) {
+            if (!node.children[char]) {
+                node.children[char] = new TrieNode();
+            }
+            node = node.children[char];
+        }
+
+        node.isEnd = true;
+    }
+}
+
+const trie = new Trie();
+
+trie.insert("cat");
+trie.insert("car");
+trie.insert("dog");
+
+console.log(trie);
+
+
+//// Space Complexity: O(N)
+
+
+
+
+
