@@ -35,7 +35,38 @@ console.log(mergeSort([5,2,9,1,7]));
 /// space complexity 0(n)
 
 
+//// Breadth First Search (Graph) – O(V)
 
+function bfs(graph, start) {
+    let queue = [start];
+    let visited = new Set();
+
+    visited.add(start);
+
+    while (queue.length > 0) {
+        let node = queue.shift();
+        console.log(node);
+
+        for (let neighbor of graph[node]) {
+            if (!visited.has(neighbor)) {
+                visited.add(neighbor);
+                queue.push(neighbor);
+            }
+        }
+    }
+}
+
+const graph = {
+    A: ["B", "C"],
+    B: ["D"],
+    C: ["E"],
+    D: [],
+    E: []
+};
+
+bfs(graph, "A");
+
+/// Space Complexity: O(V)
 
 
 
