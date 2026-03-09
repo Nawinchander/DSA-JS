@@ -1,0 +1,13 @@
+Space Complexity means how much memory (RAM) an algorithm uses as the input size increases.
+
+In DSA, we usually represent it using Big-O notation just like time complexity.
+
+Space Complexity=Auxiliary Space+Input Space
+
+Input Space → memory needed to store the input
+
+Auxiliary Space → extra memory used by the algorithm (variables, arrays, recursion stack)
+
+Example:
+
+If input size = n, we check how memory grows when n increases.
