@@ -90,6 +90,31 @@ factorial(1)
 // If n = 5 → 5 stack frames.
 // Space Complexity: O(n)
 
+//// Optimized Example (Reduce Space)
+
+function squareNumbers(arr) {
+    let result = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        result.push(arr[i] * arr[i]);
+    }
+
+    return result;
+}
+
+//// Space = O(n) because of new array.
+//// better approach
+
+function squareNumbers(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = arr[i] * arr[i];
+    }
+
+    return arr;
+}
+
+//// Space Complexity: O(1)
+
 
 
 

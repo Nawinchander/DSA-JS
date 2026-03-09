@@ -11,3 +11,12 @@ Auxiliary Space → extra memory used by the algorithm (variables, arrays, recur
 Example:
 
 If input size = n, we check how memory grows when n increases.
+
+
+
+| Space Complexity | Meaning                 | Example   |
+| ---------------- | ----------------------- | --------- |
+| O(1)             | Constant memory         | Variables |
+| O(n)             | Memory grows with input | Array     |
+| O(n²)            | Matrix memory           | 2D Array  |
+| O(n)             | Recursion stack         | Factorial |
