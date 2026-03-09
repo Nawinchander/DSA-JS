@@ -1,0 +1,22 @@
+
+
+
+| Algorithm      | Space Complexity | Reason               |
+| -------------- | ---------------- | -------------------- |
+| Merge Sort     | O(n)             | Temporary arrays     |
+| BFS Graph      | O(V)             | Queue + visited      |
+| DP Memoization | O(n)             | Memo table           |
+| N-Queens       | O(n²)            | Board storage        |
+| Trie           | O(N)             | Nodes for characters |
+
+
+
+NOTE --- 
+
+7 FAANG-level Space Complexity interview problems in JavaScript like:
+
+LRU Cache (HashMap + Doubly Linked List)
+Word Ladder (Graph BFS memory analysis)
+Union Find (Disjoint Set space)
+Segment Tree
+LRU Cache implementation
