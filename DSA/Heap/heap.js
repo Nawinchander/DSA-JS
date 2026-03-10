@@ -87,3 +87,29 @@ console.log(heap.heap);
 // [20,10,5]
 
 
+//// Heap Structure Example
+//// 10, 40, 20, 5
+//// Heap Tree becomes
+
+//       40
+//      /  \
+//    10    20
+//   /
+//  5
+
+
+//// Time Complexity
+
+// | Operation | Complexity   |
+// | --------- | ------------ |
+// | Insert    | **O(log n)** |
+// | Delete    | **O(log n)** |
+// | Peek      | **O(1)**     |
+
+
+// Left Child  = 2*i + 1
+// Right Child = 2*i + 2
+// Parent      = Math.floor((i-1)/2)
+
+
+
