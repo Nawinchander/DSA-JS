@@ -1,0 +1,14 @@
+Heap (Heaping) in Data Structures is a special tree-based structure used mainly to quickly get the largest or smallest element. In JavaScript, we usually implement a Heap using an array.
+
+There are two types of Heaps:
+
+Max Heap – Parent node is greater than its children
+Min Heap – Parent node is smaller than its children
+
+A Heap is commonly used in:
+
+Priority Queue
+
+Heap Sort
+
+Dijkstra’s Algorithm
