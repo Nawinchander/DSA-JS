@@ -68,3 +68,22 @@ class MaxHeap {
 }
 
 
+///// using heap
+
+const heap = new MaxHeap();
+
+heap.insert(10);
+heap.insert(40);
+heap.insert(20);
+heap.insert(5);
+
+console.log(heap.heap); 
+// Example output: [40,10,20,5]
+
+console.log(heap.extractMax()); 
+// 40
+
+console.log(heap.heap);
+// [20,10,5]
+
+
