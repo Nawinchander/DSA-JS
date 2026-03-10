@@ -103,4 +103,64 @@ console.log(topKElements([3,2,1,5,6,4],2));
 
 
 
+/// Merge K Sorted Arrays Using Heap
+/// Merge multiple sorted arrays into one sorted array.
+
+// Input
+// [ [1,4,7],
+//   [2,5,8],
+//   [3,6,9] ]
+
+// Output
+// [1,2,3,4,5,6,7,8,9]
+
+
+function mergeKArrays(arrays) {
+  let heap = [];
+  let result = [];
+
+  // Push first element of each array
+  for (let i = 0; i < arrays.length; i++) {
+    heap.push({
+      value: arrays[i][0],
+      arrIndex: i,
+      elementIndex: 0
+    });
+  }
+
+  heap.sort((a,b)=>a.value-b.value);
+
+  while (heap.length > 0) {
+
+    let smallest = heap.shift();
+    result.push(smallest.value);
+
+    let nextIndex = smallest.elementIndex + 1;
+    let arrIndex = smallest.arrIndex;
+
+    if (nextIndex < arrays[arrIndex].length) {
+      heap.push({
+        value: arrays[arrIndex][nextIndex],
+        arrIndex: arrIndex,
+        elementIndex: nextIndex
+      });
+
+      heap.sort((a,b)=>a.value-b.value);
+    }
+  }
+
+  return result;
+}
+
+console.log(
+mergeKArrays([
+[1,4,7],
+[2,5,8],
+[3,6,9]
+]));
+
+
+//// O(n log k)
+
+
 
