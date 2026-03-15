@@ -1,0 +1,14 @@
+LRU Cache (HashMap + Doubly Linked List)
+Concepts
+HashMap
+Doubly Linked List
+O(1) operations
+Problem
+Design an LRU Cache that supports:
+get(key)
+put(key,value)
+Both must run in O(1).
+
+
+
+
